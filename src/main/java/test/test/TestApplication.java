@@ -29,8 +29,9 @@ public class TestApplication{
 	}
 
 	@GetMapping("/health-check")
-	public ResponseEntity<Void> checkHealthStatus() {
-		return new ResponseEntity<>(HttpStatus.OK);
+	public ResponseEntity<String> checkHealthStatus() {
+		return new ResponseEntity<>("OK", HttpStatus.OK);
 	}
+
 }
 
