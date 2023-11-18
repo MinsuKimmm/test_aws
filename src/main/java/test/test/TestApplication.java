@@ -30,7 +30,7 @@ public class TestApplication{
 
 	@GetMapping("/health-check")
 	public ResponseEntity<String> checkHealthStatus() {
-		return new ResponseEntity<>("OK", HttpStatus.OK);
+		return new ResponseEntity<>("Github Action Deploy OK", HttpStatus.OK);
 	}
 
 }
