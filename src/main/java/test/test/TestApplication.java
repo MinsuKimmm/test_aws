@@ -24,7 +24,7 @@ public class TestApplication{
 	public Map<String, String> ip(HttpServletRequest request) throws UnknownHostException {
 		return new HashMap<>(){{
 			put("hostIp", InetAddress.getLocalHost().getHostAddress());
-			put("accessIp", request.getHeader("x-forwarded-for"));
+			put("accessIp2222", request.getHeader("x-forwarded-for"));
 		}};
 	}
 
