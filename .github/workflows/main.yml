@@ -69,8 +69,8 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
           aws deploy create-deployment \
-          --application-name test_aws[만든 애플리케이션 이름] \
-          --deployment-group-name test-group[만든 애플리케이션 그룹 이름] \
+          --application-name test_aws \
+          --deployment-group-name test-group \
           --file-exists-behavior OVERWRITE \
-          --s3-location bucket=hang-test-deploy[S3버킷이름],bundleType=zip,key=test_aws.zip[S3버킷 속 압축파일] \ 
+          --s3-location bucket=hang-test-deploy,bundleType=zip,key=test_aws.zip \ 
           --region ap-northeast-2
