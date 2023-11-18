@@ -3,7 +3,7 @@
 REPOSITORY=/home/ubuntu/app
 
 echo "> 현재 실행중인 애플리케이션 pid 확인"
-CURRENT_PID=$(pgrep -f $JAR_NAME)
+CURRENT_PID=$(pgrep -fl /home/ubuntu/app | grep java | awk '{print $1}')
 
 if [ -z $CURRENT_PID ]
 then
